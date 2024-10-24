@@ -1,25 +1,17 @@
 id: 830201397974663229
 name: The Pilot Club
 roles:
-  - id: role-id-here
-    name: Commuter Role
-  - id: role-id-here
-    name: Frequent Flier
-  - id: role-id-here
-    name: VIP
-  - id: role-id-here
-    name: Charters Pilots
-  - id: role-id-here
-    name: Charters Managers
-  - id: role-id-here
-    name: Flight Instructor
   - name: Moderator
-    id: 1148307481391542288
+    id: 849037973064384514
 channels:
   - name: Git Channel
-    id: 1148307485904601172
+    id: 992927027114037308
+  - name: Screenshot Contest
+    id: 830210202464813056
+  - name: Crew Chat
+    id: 830209982770708500
 baseurl:
   - name: FCP
-    link: https://flightcrew-beta.thepilotclub.org
+    link: https://flightcrew.thepilotclub.org
   - name: Internal API
     link: https://api.thepilotclub.org

@@ -1,0 +1,41 @@
+
+name: Generate and Update ConfigMap
+
+on: [push]
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go ${{ matrix.go-version }}
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23.x'
+      - name: Build Generator
+        run: go build -o bin/generator ./generator/generator.go
+      - name: Generate ConfigMap
+        run: ./bin/generator
+
+      # Checkout the Target Repository
+      - name: Checkout GitOps Repository
+        uses: actions/checkout@v4
+        with:
+          repository: 'the-pilot-club/gitops'
+          path: gitops  # Choose a suitable directory name
+          token: ${{ secrets.G_TOKEN }}
+
+      # Update the ConfigMap (Adapt paths as needed)
+      - name: Update ConfigMap
+        run: |
+          cp manifest/configmap.yaml gitops/discord-bot-v3/configmap.yaml
+
+      # Commit and Push to the Target Repository
+      - name: Commit and Push Changes
+        run: |
+          cd gitops # Move into the checked out repository
+          git config --global user.email "webdev@thepilotclub.org"
+          git config --global user.name "thepilotclub"
+          git add discord-bot-v3/configmap.yaml
+          git commit -m "Update configmap.yaml from generator"
+          git push origin main

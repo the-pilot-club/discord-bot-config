@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: discord-bot-v3-config
+data:
+    dev.yaml: |
+      id: 1148307481085358190
+      name: Dev Server
+      roles:
+        - name: Moderator
+          id: 1148307481391542288
+      channels:
+        - name: Git Channel
+          id: 1148307485904601172
+        - name: Screenshot Contest
+          id: 1148307483002155098
+        - name: Crew Chat
+          id: 1148307482557554763
+      emojis:
+        - name: TPC Reaction
+          id: :giveaway:1225560451279097926
+      baseurl:
+        - name: FCP
+          link: https://flightcrew-beta.thepilotclub.org
+        - name: Internal API
+          link: https://api.thepilotclub.org
+    prod.yaml: |
+      id: 830201397974663229
+      name: The Pilot Club
+      roles:
+        - name: Moderator
+          id: 849037973064384514
+      channels:
+        - name: Git Channel
+          id: 992927027114037308
+        - name: Screenshot Contest
+          id: 830210202464813056
+        - name: Crew Chat
+          id: 830209982770708500
+      baseurl:
+        - name: FCP
+          link: https://flightcrew.thepilotclub.org
+        - name: Internal API
+          link: https://api.thepilotclub.org
