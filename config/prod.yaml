@@ -10,6 +10,9 @@ channels:
     id: 830210202464813056
   - name: Crew Chat
     id: 830209982770708500
+emojis:
+  - name: TPC Reaction
+    id: :tpc:845075689241051138
 baseurl:
   - name: FCP
     link: https://flightcrew.thepilotclub.org
