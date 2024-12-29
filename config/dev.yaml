@@ -43,12 +43,12 @@ xp_channels:
   - name: Charters Comms
   - name: community-help-forum
   - name: pilot-training-chat
-	- name: charters-chat
+  - name: charters-chat
   - name: explorer-missions
   - name: irl-pilots
   - name: atc-lounge
-	- name: company-perks
+  - name: company-perks
   - name: early-adopters
   - name: airliner-and-bizjet-ops
-	- name: rotary-ops
+  - name: rotary-ops
   - name: your-setups
