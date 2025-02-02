@@ -3,13 +3,30 @@ name: Development Test Server
 roles:
   - name: Moderator
     id: 1148307481391542288
+ratings-roles:
+  - name: xxx
+    rating-value: 10
+    id: value
+pilot-rating-roles:
+  - name: xxx
+    rating-value: 10
+    id: value
 channels:
   - name: Git Channel
     id: 1148307485904601172
+    permissions:
+      - name: xp
+        value: true
   - name: Screenshot Contest
     id: 1148307483002155098
+    permissions:
+      - name: xp
+        value: false
   - name: Crew Chat
     id: 1148307482557554763
+    permissions:
+      -name: xp
+       value: true
 emojis:
   - name: TPC Reaction
     id: :giveaway:1225560451279097926
@@ -18,3 +35,7 @@ baseurl:
     link: https://flightcrew-beta.thepilotclub.org
   - name: Internal API
     link: https://api.thepilotclub.org
+role-rewards:
+  - role_name: top_gun
+    role_id: xxx
+    level: 10
