@@ -1,5 +1,6 @@
 id: 1148307481085358190
 name: Development Test Server
+xpgive-enabled: false
 roles:
   - name: Moderator
     id: 1148307481391542288
