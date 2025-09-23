@@ -26,8 +26,8 @@ channels:
   - name: Crew Chat
     id: 1148307482557554763
     permissions:
-      -name: xp
-       value: true
+      - name: xp
+        value: true
 emojis:
   - name: TPC Reaction
     id: :giveaway:1225560451279097926
