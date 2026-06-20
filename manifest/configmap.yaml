@@ -21,9 +21,9 @@ data:
           id: :giveaway:1225560451279097926
       baseurl:
         - name: FCP
-          link: https://flightcrew-beta.thepilotclub.org
+          link: http://fcpbeta.fcp.svc.cluster.local
         - name: Internal API
-          link: https://api.thepilotclub.org
+          link: http://ts-api-beta.api.svc.cluster.local:3000
     prod.yaml: |
       id: 830201397974663229
       name: The Pilot Club
@@ -39,6 +39,6 @@ data:
           id: 830209982770708500
       baseurl:
         - name: FCP
-          link: https://flightcrew.thepilotclub.org
+          link: http://fcp.fcpprod.svc.cluster.local
         - name: Internal API
-          link: https://api.thepilotclub.org
+          link: http://ts-api-beta.api.svc.cluster.local:3000

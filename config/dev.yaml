@@ -33,9 +33,9 @@ emojis:
     id: :giveaway:1225560451279097926
 baseurl:
   - name: FCP
-    link: https://flightcrew-beta.thepilotclub.org
+    link: http://fcpbeta.fcp.svc.cluster.local
   - name: Internal API
-    link: https://api.thepilotclub.org
+    link: http://ts-api-beta.api.svc.cluster.local:3000
 role_rewards:
   - role_name: Frequent Flyer 
     role_id: 1148307481290866804

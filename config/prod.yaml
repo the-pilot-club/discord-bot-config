@@ -15,6 +15,6 @@ emojis:
     id: :tpc:845075689241051138
 baseurl:
   - name: FCP
-    link: https://flightcrew.thepilotclub.org
+    link: http://fcp.fcpprod.svc.cluster.local
   - name: Internal API
-    link: https://api.thepilotclub.org
+    link: http://ts-api-beta.api.svc.cluster.local:3000
