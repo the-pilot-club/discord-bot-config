@@ -1,7 +1,9 @@
-
 name: Generate and Update ConfigMap
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   push:
@@ -11,7 +13,7 @@ jobs:
       - name: Setup Go ${{ matrix.go-version }}
         uses: actions/setup-go@v4
         with:
-          go-version: '1.23.x'
+          go-version: "1.23.x"
       - name: Build Generator
         run: go build -o bin/generator ./generator/generator.go
       - name: Generate ConfigMap
@@ -21,8 +23,8 @@ jobs:
       - name: Checkout GitOps Repository
         uses: actions/checkout@v4
         with:
-          repository: 'the-pilot-club/gitops'
-          path: gitops  # Choose a suitable directory name
+          repository: "the-pilot-club/gitops"
+          path: gitops # Choose a suitable directory name
           token: ${{ secrets.G_TOKEN }}
 
       # Update the ConfigMap (Adapt paths as needed)
@@ -33,9 +35,13 @@ jobs:
       # Commit and Push to the Target Repository
       - name: Commit and Push Changes
         run: |
-          cd gitops # Move into the checked out repository
+          cd gitops
           git config --global user.email "webdev@thepilotclub.org"
           git config --global user.name "thepilotclub"
           git add discord-bot-v3/configmap.yaml
+          if git diff --staged --quiet; then
+            echo "No changes to commit, skipping push"
+            exit 0
+          fi
           git commit -m "Update configmap.yaml from generator"
           git push origin main
